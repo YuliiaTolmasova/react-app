@@ -10,10 +10,13 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "markdown-it-anchor": "^8.6.7",
+    "markdown-it-table-of-contents": "^0.6.0",
     "next": "13.1.6",
     "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-markdown": "^8.0.5",
     "sass": "^1.58.0"
   }
 }

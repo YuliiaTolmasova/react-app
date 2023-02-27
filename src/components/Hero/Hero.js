@@ -18,7 +18,6 @@ const Hero = () => (
                 <HeroImage></HeroImage>
             </div>
         </div>
-        
     </div>
 );
 

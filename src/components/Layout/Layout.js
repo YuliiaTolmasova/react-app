@@ -10,10 +10,10 @@ const Layout = ({children}) => (
     <div>
 
         <Header/>
-        <Hero/>
+
         {children}
-        <Form/>
-        <InfoPage/>
+
+
         <Footer/>
     </div>
 );

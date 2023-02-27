@@ -10,8 +10,8 @@ const navigation = [
     },
     {
         id: 2,
-        title: 'Products',
-        path: '/products'
+        title: 'Blog',
+        path: '/blog2'
     },
     {
         id: 3,
@@ -20,9 +20,10 @@ const navigation = [
     },
     {
         id: 4,
-        title: 'Pricing',
-        path: '/pricing'
+        title: 'Contact us',
+        path: '/contact-us'
     }
+
 ]
 
 const Header = () => {
