@@ -1,14 +1,31 @@
+import Image from "next/image";
+
 const BlogCard = (props) => (
-    <div>
-        <img src={props.image} alt={props.name}/>
-        <div>{props.author}</div>
+	<div className="color">
 
-        <h2>{props.name}</h2>
-        <div>{props.PostText}</div>
-
-        {props.tags.map(({id, attributes}) => (
+	<div className="blog">
+		<div className="container blog__container">
+			<div className="blog__card">
+				<div className="blog__card-author">
+					{props.name}
+					{props.date}
+				</div>
+				<div className="blog__card-title">
+					{props.title}
+				</div>
+				<div className="blog__card-description">
+					{props.description}
+				</div>
+				<div className="blog__card-tags">
+				{props.tags.map(({id, attributes}) => (
                 <div className='tag' key={id}>{attributes.name}</div>
         ))}
-    </div>
+				</div>
+				<img src={props.image} alt={props.title} />
+			</div>
+		</div>
+	</div>
+
+</div>
 )
 export default BlogCard;

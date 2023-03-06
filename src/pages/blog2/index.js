@@ -6,6 +6,7 @@ import BlogCard from "@/components/Blog/BlogCard";
 const BlogPage = (props) => {
     const router = useRouter()
     console.log(props.data);
+console.log(props.data.attributes)
 
     const serviceData = props.data.data;
 
@@ -14,8 +15,16 @@ const BlogPage = (props) => {
 
         {serviceData.map(({id, attributes }) => (
             <Link key={id} href={'/blog2/' + attributes.slug}>
-                
-                <BlogCard tags={attributes.tags.data} name={attributes.Name} image={attributes.image.data.attributes.formats.thumbnail.url} author={attributes.author} PostText={attributes.PostText}/>{attributes.Name}</Link>
+                <BlogCard   tags={attributes.tags.data}
+                            name={attributes.authors.data[0].attributes.name}
+                            image={attributes.image.data.attributes.formats.thumbnail.url}
+                            author={attributes.author}
+                            description={attributes.description}
+                            title={attributes.title}
+                            date={attributes.date}
+                        />
+                        {attributes.name}
+            </Link>
         ))}
 
     </div>
