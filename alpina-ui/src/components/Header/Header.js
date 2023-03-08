@@ -18,8 +18,8 @@ const navigation = [
     },
     {
         id: 4,
-        title: 'About',
-        path: '/about'
+        title: 'Contact-us',
+        path: '/contact-us'
     }
 ]
 
@@ -38,9 +38,6 @@ const Header = () => (
                     </ul>
                 </nav>
             </div>
-            <h2>
-                header 123
-            </h2>
         </div>
         <div className='header is-active'>
             <div className='container'>

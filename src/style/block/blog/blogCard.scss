@@ -13,7 +13,7 @@
             color: #6941C6;
             margin-bottom: 8px;
         }
-        &-title {
+        &__blog-title {
             font-weight: 600;
             font-size: 30px;
             color: #101828;
@@ -22,7 +22,7 @@
             align-items: center;
             margin-bottom: 8px;
         }
-        &-description {
+        &__blog-description {
             width: 380px;
             max-width: 100%;
             font-weight: 400;
@@ -30,7 +30,7 @@
             color: #475467;
             margin-bottom: 24px;
         }
-        &-tags {
+        &__blog-tags {
             display: flex;
             gap: 8px;
         }

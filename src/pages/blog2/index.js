@@ -1,7 +1,7 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
 
-import BlogCard from "@/components/Blog/BlogCard";
+import BlogCard from "@/components/Blog/BlogList";
 
 const BlogPage = (props) => {
     const router = useRouter()
@@ -15,8 +15,8 @@ console.log(props.data.attributes)
 
         {serviceData.map(({id, attributes }) => (
             <Link key={id} href={'/blog2/' + attributes.slug}>
-                <BlogCard   tags={attributes.tags.data}
-                            name={attributes.authors.data[0].attributes.name}
+                <BlogCard   tags={attributes.tags.data.attributes}
+                            name={attributes.name}
                             image={attributes.image.data.attributes.formats.thumbnail.url}
                             author={attributes.author}
                             description={attributes.description}

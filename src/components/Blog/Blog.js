@@ -1,4 +1,4 @@
-import BlogList from "./BlogList"
+import BlogList from "./BlogCard"
 
 import { blogOfTheDay } from "./blogData";
 

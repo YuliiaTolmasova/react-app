@@ -2,7 +2,6 @@ const Form = () => {
 return (
     <section className="form">
         <div className="form__link">
-            <a>Contact us</a>
         </div>
         <div className="form__title">
             Get in touch

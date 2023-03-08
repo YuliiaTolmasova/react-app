@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-import BlogCard from "@/components/Blog/BlogCard";
+import BlogCard from "@/components/Blog/BlogList";
 
 
 

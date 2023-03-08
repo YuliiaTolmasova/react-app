@@ -1,33 +1,40 @@
 import Link from "next/link";
-// import remarkGfm from 'remark-gfm';
+import remarkGfm from 'remark-gfm';
 import { useRouter } from "next/router";
 import ReactMarkdown from 'react-markdown';
 import BlogList from "@/components/Blog/BlogList";
-import BlogCard from "@/components/Blog/BlogCard";
+
 
 const Blog = (props) => {
 
-	const { title, description, richtext } = props.data.attributes;
-	// const {url} = props.data.attributes.image.data[0].formats.thumbnail.attributes;
-	// const {name, desc } = props.data.attributes.authors.data[0].attributes;
-	const {tags} = props.data.attributes;
+
+	const { title, richText } = props.data.attributes;
+	// const {url} = props.data.attributes.image.data[0].attributes.formats.thumbnail;
+	// const {name} = props.data.attributes.authors.data[0].attributes;
+	const {name} = props.data.attributes.name;
+	const {description} = props.data.attributes.description;
+	const tags = props.data.attributes.tags.data;
 	const {date} = props.data.attributes;
-	// const {image} = props.data.attributes.authors.data[0].attributes;
+	const {image} = props.data.attributes.image;
+
+	console.log("tags", tags)
+	console.log("tags2", props.data.attributes)
 
 	return (
 		<div>
-			<BlogCard
+			<BlogList
 				title={title}
-				// name={name}
+				name={name}
 				date={date}
 				// image={url}
+				// image={image}
 				description={description}
-				tags={tags.data}
+				tags={tags}
 			/>
 			<div className="container">
 				<ReactMarkdown
-					children={richtext}
-					// remarkPlugins={[remarkGfm]}
+					children={richText}
+					remarkPlugins={[remarkGfm]}
 				/>
 			</div>
 		</div>
