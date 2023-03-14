@@ -14,12 +14,17 @@ const navigation = [
     {
         id: 3,
         title: 'Blog',
-        path: '/blog'
+        path: '/blog2'
     },
     {
         id: 4,
         title: 'Contact-us',
         path: '/contact-us'
+    },
+    {
+        id: 5,
+        title: 'Clinics',
+        path: '/clinic'
     }
 ]
 

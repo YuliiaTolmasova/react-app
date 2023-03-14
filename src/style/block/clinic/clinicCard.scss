@@ -1,0 +1,57 @@
+.clinic {
+    // img {
+    //     margin-bottom: 32px;
+    //     width: 1216px;
+    //     height: 418px;
+    //     max-width: 100%;
+    //     object-fit: cover;
+    // }
+    &__main-card {
+        width: 33%;
+
+        &__clinic-title {
+            font-weight: 600;
+            font-size: 30px;
+            color: #101828;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        &__clinic-description {
+            width: 380px;
+            max-width: 100%;
+            font-weight: 400;
+            font-size: 16px;
+            color: #475467;
+            margin-bottom: 24px;
+        }
+        &__clinic-tags {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+
+}
+.clinic__container {
+    display: flex;
+    gap: 20px;
+}
+
+.clinic-section__client-field {
+    display: flex;
+    justify-content: space-between;
+}
+
+.clinic-section {
+        width: 66%;
+
+    &__name-adress  {
+        margin-bottom: 25px;
+    }
+    &__services {
+        margin-bottom: 25px;
+    }
+
+}

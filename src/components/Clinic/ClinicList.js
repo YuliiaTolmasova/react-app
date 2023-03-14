@@ -1,22 +1,18 @@
 const ClinicList = (props) => (
 	<div className="container">
-		<article className="blog-list-item">
+		<article className="clinic-list-item">
 			<img src={props.image} alt={props.title}/>
-			<div className="blog-list">
-				<div className="blog-head">
-					<div className="blog-title-name-section">
-						<div className="blog-list__title">
-							{props.title}
-							{/* <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M1 11L11 1M11 1H1M11 1V11" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-							</svg> */}
-						</div>
-						<div className="blog__list-author">
+			<div className="clinic-list">
+				<div className="clinic-head">
+					<div className="clinic-title-name-section">
+						<div className="clinic-list__title">
 							{props.name}
-							{props.date}
+						</div>
+						<div className="clinic-list__type">
+							{props.type}
 						</div>
 					</div>
-					<div className="blog-rewiew-section">
+					<div className="clinic-rewiew-section">
 						<div className="raiting">
 							{props.raiting}
 						</div>
@@ -43,15 +39,15 @@ const ClinicList = (props) => (
 						</div>
 					</div>
 				</div>
-				<div className="blog-list__description" style={{ maxWidth: '100%' }}>
+				<div className="clinic-list__description" style={{ maxWidth: '100%' }}>
 					{props.description}
 				</div>
-				{/* <div className="blog-list__tags">
+				{/* <div className="clinic-list__tags">
 					{props.tags.map(({id, attributes}) => (
 					<div className='tag' key={id}>{attributes.name}</div>
 			))}
 				</div> */}
-				{/* <div className="blog-list__tags">
+				{/* <div className="clinic-list__tags">
 					{props.tags}
 				</div> */}
 			</div>

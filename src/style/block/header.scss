@@ -172,16 +172,16 @@
           width: 70px;
         }
       &.active {
-        left: 20px;
-        max-width: 90%;
+        left: 150px;
+        max-width: 50%;
 
         button {
-          margin-left: 145px;
-          margin-top: -90px;
           height: 44px;
           width: 340px;
           max-width: 100%;
           position: relative;
+          top: 0px;
+
 
           &::before {
             content: "";

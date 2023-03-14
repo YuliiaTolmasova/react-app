@@ -1,32 +1,31 @@
-import Image from "next/image";
-
 const ClinicCard = (props) => {
 	console.log(props.stars)
 	return (
 
-	<div className="color">
-
-	<div className="blog">
-		<div className="container blog__container">
-			<div className="blog__blog">
+	<div className="clinic">
+		<div className="container clinic__container">
+			<div className="clinic__main-card">
 				<img src={props.image} alt={props.title}/>
-				
-				<div className="blog__blog-title">
-					{props.title}
+
+				<div className="clinic__clinic-title">
+					{props.name}<br/>
+					{props.type}
 				</div>
-				<div className="blog__blog-description">
+				<div className="clinic__clinic-description">
 					{props.description}
 				</div>
-				{/* <div className="blog__blog-tags">
+			</div>
+				{/* <div className="clinic__clinic-tags">
 				{props.tags.map(({id, attributes}) => (
                 <div className='tag' key={id}>{attributes.name}</div>
         ))}
 				</div> */}
-				{/* <div className="blog-list__tags">
+				{/* <div className="clinic-list__tags">
 					{props.tags}
 				</div> */}
-				<img src={props.image} alt={props.title} />
-				<div className="raiting">
+
+
+				{/* <div className="raiting">
 					{props.raiting}
 				</div>
 				<div className="stars">
@@ -34,9 +33,10 @@ const ClinicCard = (props) => {
 				</div>
 				<div className="rewiew">
 					{props.rewiew}
-				</div>
-			</div>
-			{/* <div className="clinic-section">
+				</div> */}
+
+
+			<div className="clinic__clinic-section">
 				<div className="clinic-section__name-adress">
 					{props.nameadress}
 				</div>
@@ -53,12 +53,15 @@ const ClinicCard = (props) => {
 					<div className="clinic-section__button">
 						<button>Записатися</button>
 					</div>
+					<div className="clinic-section__text">
+						{props.richText}
+					</div>
 				</div>
-			</div> */}
+			</div>
+
 		</div>
 	</div>
 
-</div>
 )}
 export default ClinicCard;
 

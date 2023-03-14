@@ -15,14 +15,15 @@ const navigation = [
     },
     {
         id: 3,
-        title: 'Resources',
-        path: '/resources'
+        title: 'Clinics',
+        path: '/clinic'
     },
     {
         id: 4,
         title: 'Contact us',
         path: '/contact-us'
-    }
+    },
+
 
 ]
 

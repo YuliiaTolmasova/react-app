@@ -1,9 +1,9 @@
 import {useRouter} from "next/router";
 import Link from "next/link";
 
-import ClinicList from "@/components/Blog/BLogList";
+import ClinicList from "@/components/Clinic/ClinicList";
 
-const BlogPage = (props) => {
+const ClinicPage = (props) => {
     const router = useRouter()
     console.log(props.data);
 console.log(props.data.attributes)
@@ -14,30 +14,25 @@ console.log(props.data.attributes)
     return <div className="container">
 
         {serviceData.map(({id, attributes }) => (
-            <Link key={id} href={'/blog2/' + attributes.slug}>
-                <ClinicList tags={attributes.tags.data.attributes}
+            <Link key={id} href={'/clinic/' + attributes.slug}>
+            <ClinicList
+                            type={attributes.type}
                             name={attributes.name}
-                            // image={attributes.image.data.attributes.formats.thumbnail.url}
-                            author={attributes.author}
+                            nameadress={attributes.nameadress}
                             description={attributes.description}
-                            title={attributes.title}
-                            date={attributes.date}
                             raiting={attributes.raiting}
-                            rewiew={attributes.rewiew}
-                            stars={attributes.stars}
-                        />
-                        {attributes.name}
+                            />
             </Link>
         ))}
 
     </div>
 
 }
-export default BlogPage;
+export default ClinicPage;
 
 
 export async function getStaticProps(context) {
-    const res = await fetch(`${process.env.API_URL}/blogs?populate=*`)
+    const res = await fetch(`${process.env.API_URL}/clinics?populate=*`)
     const data = await res.json()
     console.log(context);
     return {

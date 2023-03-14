@@ -4,7 +4,7 @@
     margin: 0 auto;
 }
 
-.blog-list-item {
+.clinic-list-item {
     // display: grid;
     // grid-template-columns: repeat(3, minmax(250px, 384px));
     display: flex;
@@ -16,25 +16,19 @@
         max-width: 100%;
     }
 }
-.blog-list {
+.clinic-list {
     display: flex;
     flex-direction: column;
 }
 
-.blog-head {
+.clinic-head {
     display: flex;
     justify-content: space-between;
 }
 
-.blog__list-author {
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    color: #6941C6;
-    margin-bottom: 8px;
-}
 
-.blog-list__title {
+
+.clinic-list__title {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,7 +44,7 @@
     }
 }
 
-.blog-list__description {
+.clinic-list__description {
     font-weight: 400;
     font-size: 18px;
     color: #475467;
@@ -62,7 +56,7 @@
     margin-bottom: 24px;
 }
 
-.blog-list__tags {
+.clinic-list__tags {
     margin-bottom: 16px;
     display: flex;
     gap: 8px;
@@ -78,13 +72,13 @@
 
 
 @media (max-width: 1240px) {
-    .blog-list {
+    .clinic-list {
         padding: 0 32px;
     }
 }
 
 @media (max-width: 968px) {
-    .blog-list {
+    .clinic-list {
         grid-template-columns: repeat(2, minmax(243px, 384px));
         justify-content: center;
         padding: 0 16px;
@@ -96,7 +90,7 @@
 }
 
 @media (max-width: 568px) {
-    .blog-list {
+    .clinic-list {
         grid-template-columns: repeat(1, minmax(250px, 384px));
     }
 }
