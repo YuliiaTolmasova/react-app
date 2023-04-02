@@ -4,23 +4,23 @@ import Link from "next/link";
 import ClinicList from "@/components/Clinic/ClinicList";
 
 const ClinicPage = (props) => {
-    const router = useRouter()
-    console.log(props.data);
-console.log(props.data.attributes)
-
     const serviceData = props.data.data;
 
-    console.log(serviceData);
+//     console.log(props.data);
+// console.log(props.data.attributes)
+
+//     console.log(serviceData);
     return <div className="container">
 
         {serviceData.map(({id, attributes }) => (
             <Link key={id} href={'/clinic/' + attributes.slug}>
             <ClinicList
+                            logo={attributes.logo.data[0].attributes.url}
                             type={attributes.type}
                             name={attributes.name}
-                            nameadress={attributes.nameadress}
                             description={attributes.description}
                             raiting={attributes.raiting}
+                            tags={attributes.tags.data.attributes}
                             />
             </Link>
         ))}
@@ -32,7 +32,7 @@ export default ClinicPage;
 
 
 export async function getStaticProps(context) {
-    const res = await fetch(`${process.env.API_URL}/clinics?populate=*`)
+    const res = await fetch(`${process.env.API_URL}/clinics?populate[0]=tags&populate[1]=star&populate[2]=logo.media`)
     const data = await res.json()
     console.log(context);
     return {

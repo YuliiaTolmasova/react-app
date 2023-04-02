@@ -1,12 +1,16 @@
 const ClinicList = (props) => (
+
 	<div className="container">
 		<article className="clinic-list-item">
-			<img src={props.image} alt={props.title}/>
+			<img src={props.logo} alt={props.title}/>
 			<div className="clinic-list">
 				<div className="clinic-head">
 					<div className="clinic-title-name-section">
 						<div className="clinic-list__title">
 							{props.name}
+						</div>
+						<div className="clinic-list__news">
+							{props.news}
 						</div>
 						<div className="clinic-list__type">
 							{props.type}
@@ -39,73 +43,17 @@ const ClinicList = (props) => (
 						</div>
 					</div>
 				</div>
-				<div className="clinic-list__description" style={{ maxWidth: '100%' }}>
-					{props.description}
-				</div>
 				{/* <div className="clinic-list__tags">
 					{props.tags.map(({id, attributes}) => (
 					<div className='tag' key={id}>{attributes.name}</div>
 			))}
 				</div> */}
-				{/* <div className="clinic-list__tags">
-					{props.tags}
-				</div> */}
+				<div className="clinic-list__description" style={{ maxWidth: '100%' }}>
+					{props.description}
+				</div>
 			</div>
 		</article>
 </div>
 )
 export default ClinicList;
-
-
-
-
-
-
-
-
-
-
-
-// import Image from "next/image";
-
-// const BlogCard = (props) => (
-// 	<div className="color">
-
-// 	<div className="blog">
-// 		<div className="container blog__container">
-// 			<div className="blog__blog">
-// 				<div className="blog__card-author">
-// 					{props.name}
-// 					{props.date}
-// 				</div>
-// 				<div className="blog__blog-title">
-// 					{props.title}
-// 				</div>
-// 				<div className="blog__blog-description">
-// 					{props.description}
-// 				</div>
-// 				{/* <div className="blog__blog-tags">
-// 				{props.tags.map(({id, attributes}) => (
-//                 <div className='tag' key={id}>{attributes.name}</div>
-//         ))}
-// 				</div> */}
-// 				{/* <div className="blog-list__tags">
-// 					{props.tags}
-// 				</div> */}
-// 				<img src={props.image} alt={props.title} />
-// 				<div className="raiting">
-// 					{props.raiting}
-// 				</div>
-// 				<div className="rewiew">
-// 					{props.rewiew}
-// 				</div>
-// 			</div>
-// 		</div>
-// 	</div>
-
-// </div>
-// )
-// export default BlogCard;
-
-
 

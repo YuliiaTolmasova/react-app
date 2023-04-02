@@ -1,0 +1,13 @@
+.gallery-slider {
+    margin-top: 20px;
+    &__slide {
+        width: 100%;
+        height: 200px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}

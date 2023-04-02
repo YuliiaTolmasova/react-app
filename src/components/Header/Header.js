@@ -5,27 +5,26 @@ import Logo from '../Logo/Logo';
 const navigation = [
     {
         id: 1,
-        title: 'Home',
+        title: 'Головна',
         path: '/'
     },
     {
         id: 2,
-        title: 'Blog',
-        path: '/blog2'
+        title: 'Новини',
+        path: '/blog'
     },
     {
         id: 3,
-        title: 'Clinics',
+        title: 'Клініки',
         path: '/clinic'
     },
     {
         id: 4,
-        title: 'Contact us',
+        title: 'Контакт з нами',
         path: '/contact-us'
     },
-
-
 ]
+const contactsLink = '/contact-us'
 
 const Header = () => {
     const [isClicked, setIsClicked] = useState(false)
@@ -37,7 +36,9 @@ const Header = () => {
                     <nav className='nav'>
                         <ul className={`nav__menu ${isClicked && 'active'}`}>
                             {navigation.map(({id, title, path}) => (
-                                <li className={`nav__menu-item ${isClicked && 'active'}`} key={id}><Link href={path}>{title}</Link></li>
+                                <li className={`nav__menu-item ${isClicked && 'active'}`} key={id}>
+                                    <Link href={path} key={id+"link"}>{title}</Link>
+                                </li>
                             ))}
                         </ul>
                         <div className={`nav__burger ${isClicked && 'active'}`} onClick={() => setIsClicked(!isClicked)} >
@@ -47,9 +48,8 @@ const Header = () => {
                         </div>
                     </nav>
                 </div>
-
                 <div className={`header__button ${isClicked && 'active'}`}>
-                    <button>Sign Up</button>
+                    <Link className="button" href={contactsLink}>Зв'язатись з нами</Link>
                 </div>
             </div>
             <hr />

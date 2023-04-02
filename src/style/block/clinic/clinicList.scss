@@ -24,6 +24,7 @@
 .clinic-head {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 30px
 }
 
 
@@ -60,11 +61,14 @@
     margin-bottom: 16px;
     display: flex;
     gap: 8px;
+    background: #6495ed;
     span {
         padding: 2px 10px;
         border-radius: 16px;
         font-weight: 500;
-        font-size: 14px;
+        font-size: 18px;
+
+
     }
 }
 
@@ -79,18 +83,28 @@
 
 @media (max-width: 968px) {
     .clinic-list {
-        grid-template-columns: repeat(2, minmax(243px, 384px));
         justify-content: center;
         padding: 0 16px;
         &__title {
             font-size: 22px;
         }
     }
+    .clinic-head {
+        flex-direction: column;
+    }
     
 }
 
 @media (max-width: 568px) {
+
+    .clinic-list-item {
+        flex-direction: column;
+    }
     .clinic-list {
-        grid-template-columns: repeat(1, minmax(250px, 384px));
+       display: flex;
+       flex-direction: column;
+    }
+    .clinic-head {
+        flex-direction: column;
     }
 }

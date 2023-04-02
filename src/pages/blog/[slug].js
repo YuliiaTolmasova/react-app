@@ -2,13 +2,13 @@ import Link from "next/link";
 import remarkGfm from 'remark-gfm';
 import { useRouter } from "next/router";
 import ReactMarkdown from 'react-markdown';
-import ClinicCard from "@/components/Blog/BlogCard";
+import BlogCard from "@/components/Blog/BlogCard";
 
 
 const Blog = (props) => {
 
 
-	const { title, richText } = props.data.attributes;
+	const { title, blogText } = props.data.attributes;
 	// const {url} = props.data.attributes.image.data[0].attributes.formats.thumbnail;
 	// const {name} = props.data.attributes.authors.data[0].attributes;
 	const {name} = props.data.attributes.name;
@@ -28,7 +28,7 @@ const Blog = (props) => {
 	console.log(props.stars)
 	return (
 		<div>
-			<ClinicCard
+			<BlogCard
 				title={title}
 				name={name}
 				date={date}
@@ -42,7 +42,7 @@ const Blog = (props) => {
 			/>
 			<div className="container">
 				<ReactMarkdown
-					children={richText}
+					children={blogText}
 					remarkPlugins={[remarkGfm]}
 				/>
 			</div>
@@ -57,7 +57,7 @@ export async function getStaticProps(context) {
   const res = await fetch(
 	// `${process.env.API_URL}/blogs?filters[slug][$eq]=${context.params.slug}&populate[0]=tags&populate[1]=authors.image.media&populate[2]=image`
 
-    `${process.env.API_URL}/blogs?filters[slug][$eq]=${context.params.slug}&populate=*`
+    `${process.env.API_URL}/blogs?filters[slug][$eq]=${context.params.slug}&populate[0]=tags&populate[1]=star&populate[2]=image.media`
   );
   const response = await res.json();
 

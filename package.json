@@ -10,14 +10,21 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "cloudinary": "^1.35.0",
+    "leaflet": "^1.9.3",
     "markdown-it-anchor": "^8.6.7",
     "markdown-it-table-of-contents": "^0.6.0",
     "next": "13.1.6",
     "normalize.css": "^8.0.1",
-    "react": "18.2.0",
+    "react": "^18.2.0",
     "react-dom": "18.2.0",
+    "react-leaflet": "^4.2.1",
     "react-markdown": "^8.0.5",
+    "react-slick": "^0.29.0",
     "remark-gfm": "^3.0.1",
-    "sass": "^1.58.0"
+    "sass": "^1.58.0",
+    "slick-carousel": "^1.8.1",
+    "strapi-html-editor": "^1.0.2",
+    "swiper": "^9.1.1"
   }
 }

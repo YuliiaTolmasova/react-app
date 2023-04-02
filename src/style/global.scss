@@ -1,52 +1,39 @@
 @import 'variables';
-// @import '../../alpina-ui/style/block/blog';
-// @import '../../alpina-ui/style/block/blogList';
-// @import '../../alpina-ui/style/block/blogTags';
 
 @import 'block/footer';
 @import 'block/header';
 @import 'block/hero';
 @import 'block/form.scss';
+@import 'block/accordion.scss';
+@import 'block/privacy-policy.scss';
 
 @import 'block/blog/blogCard';
 @import 'block/blog/blogList';
 @import 'block/blog/blogTags';
 
-@import 'block/infoPage';
-
 @import 'block/clinic/clinicList.scss';
 @import 'block/clinic/clinicCard.scss';
-
-
-
-
-
-
-
-
-
+@import 'block/clinic/doctor.scss';
+@import 'block/clinic/gallerySlider.scss';
 
 * {
-  margin: 0;
   box-sizing: border-box;
 }
-// ul {
-//   margin-block-start: 0em;
-//   margin-block-end: 0em;
-//   margin-inline-start: 0px;
-//   margin-inline-end: 0px;
-//   padding-inline-start: 0px;
-// }
+
+img {
+  max-width: 100%;
+}
+
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
 .container {
   width: 1280px;
   max-width: 100%;
   margin: 0 auto;
   padding-left: 32px;
   padding-right: 32px;
-
 }
 
 @media (max-width: 390px) {
@@ -55,3 +42,4 @@ body {
     padding-right: 12px;
   }
 }
+

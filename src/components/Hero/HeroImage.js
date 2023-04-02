@@ -1,7 +1,7 @@
 const HeroImage = () => {
     return (
       <>
-          <img src='/images/hero/massage.png' alt="img" />
+          <img src='/images/univercum-clinic/HeroImage.jpg' alt="img" />
       </>
     )
   }

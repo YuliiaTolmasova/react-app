@@ -4,22 +4,22 @@ import Logo from '../Logo/Logo';
 const navigationFooter = [
     {
         id: 1,
-        title: 'Home',
+        title: 'Головна',
         path: '/'
     },
     {
         id: 2,
-        title: 'Blog',
+        title: 'Новини',
         path: '/blog2'
     },
     {
         id: 3,
-        title: 'Clinics',
+        title: 'Клініки',
         path: '/clinic'
     },
     {
         id: 4,
-        title: 'Contact us',
+        title: 'Контакт з нами',
         path: '/contact-us'
     }
 ]
@@ -35,7 +35,7 @@ const Footer = () => (
                 })}
             </div>
             <div className="footer__copyright">
-                © 2077 Untitled UI
+                © 2023 Ukraine
             </div>
         </div>
     </div>

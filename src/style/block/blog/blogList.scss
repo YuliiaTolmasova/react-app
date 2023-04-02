@@ -12,6 +12,7 @@
     margin: 64px 0;
     align-items: center;
     img {
+        height: 300px;
         margin-bottom: 32px;
         max-width: 100%;
     }
@@ -78,25 +79,39 @@
 
 
 @media (max-width: 1240px) {
-    .blog-list {
-        padding: 0 32px;
-    }
+    // .blog-list {
+    //     padding: 0 32px;
+    // }
 }
 
-@media (max-width: 968px) {
+@media (max-width: 768px) {
     .blog-list {
-        grid-template-columns: repeat(2, minmax(243px, 384px));
-        justify-content: center;
-        padding: 0 16px;
         &__title {
             font-size: 22px;
         }
     }
-    
+    .blog-list-item {
+        margin-top: 10px;
+        margin-bottom: 40px;
+        display: flex;
+        flex-direction: column;
+
+        img {
+        height: 250px;
+        margin-bottom: 0;
+        }
+    }
 }
 
 @media (max-width: 568px) {
     .blog-list {
-        grid-template-columns: repeat(1, minmax(250px, 384px));
+        &__description{ 
+            margin-bottom: 0;
+        }
+    }
+    .blog-list-item {
+        img {
+        height: 200px;
+        }
     }
 }
